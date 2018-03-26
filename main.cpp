@@ -1,15 +1,16 @@
 #include <iostream>
 #include <malloc.h>
-
-using namespace std;
-
 #include "stdio.h"
 
-typedef struct Lnode{
-    int data;
-    struct  Lnode* next;
-}Lnode;
+typedef int ElemType;
+typedef bool Status;
+#define ERROR 1;
+#define OK 0;
 
+typedef struct Lnode{
+    ElemType data;
+    Lnode *next;
+}LnodeAlias,*LnodePtr;
 int main() {
     int i = 0 , sum = 0 ;
     for (int i = 0; i < 101; ++i) {
@@ -30,7 +31,6 @@ int main() {
     }else{
         printf("allocate successful!");
         free(inst);
-        printf("free error!");
     }
 
     return 0;
