@@ -17,6 +17,9 @@ typedef struct SeqList{
     ElemType length;
 }SeqList;
 
+/*create node*/
+SeqList* createNode();
+
 /*init sequence list*/
 SeqList* initSeqlist();
 

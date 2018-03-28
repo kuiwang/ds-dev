@@ -5,6 +5,7 @@
 #include "sqlist.h"
 
 int main(int argc , char **argv){
+    /*
     SeqList *list = initSeqlist();
     createSeqlist(list);
     printSeqlist(list);
@@ -12,6 +13,7 @@ int main(int argc , char **argv){
     printSeqlist(list);
     deleteElem(list,5);
     printSeqlist(list);
+    */
 
     return 0;
 }

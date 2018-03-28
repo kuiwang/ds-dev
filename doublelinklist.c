@@ -1,19 +1,15 @@
-//双向链表
-// Created by root on 2018/3/27.
+//double linkedlist
+// Created by root on 2018/3/28.
 //
-#include "basic.h"
 
-#ifndef DS_DEV_DOUBLELIST_H
-#define DS_DEV_DOUBLELIST_H
-
-typedef struct DLNode{
-    ElemType data;
-    struct DLNode *pre;
-    struct DLNode *next;
-}DLNode;
+#include "doublelist.h"
 
 /*create doublelinkedlist node*/
-DLNode* createDLNode();
+DLNode* createDLNode(){
+    DLNode* node;
+    node = (DLNode*)malloc(sizeof(DLNode));
+    return node;
+}
 
 /*init doublelinkedlist*/
 DLNode* initDoubleLinklist();
@@ -35,5 +31,3 @@ int findElem(DLNode *list , ElemType x);
 
 /*print elements in the sequence list*/
 void printDoubleLinklist(DLNode *list);
-
-#endif //DS_DEV_DOUBLELIST_H

@@ -42,14 +42,22 @@ SeqList* insertElem(SeqList *list ,int n , ElemType value){
         exit(1);
     }
     len = list->length;
-    if(n <0 || n>len){
+    if(n <0 || n>len || len == maxSize){ //location error or reach to max size
         printf("error, location :%i is invalid!\n" ,n);
         exit(1);
     }
+    /*
     for (i = len; i >=n ; --i) {
         list->data[i] = list->data[i-1];
     }
     list->data[i]=value;
+    */
+
+    for (i = len-1; i >=n-1 ; --i) {
+        list->data[i+1] = list->data[i];
+    }
+    list->data[n-1]=value;
+
     ++list->length;
     return list;
 }
@@ -89,7 +97,7 @@ int findElem(struct SeqList *list,ElemType x){
             return i;
         }
     }
-    return i;
+    return -1;
 }
 
 void printSeqlist(SeqList *list){
