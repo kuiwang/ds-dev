@@ -10,6 +10,6 @@ typedef struct DLNode{
     ElemType data;
     struct DLNode *pre;
     struct DLNode *next;
-}DLNode,*DLNodePtr;
+}DLNode;
 
 #endif //DS_DEV_DOUBLELIST_H

@@ -5,14 +5,37 @@
 #ifndef DS_DEV_SQLIST_H
 #define DS_DEV_SQLIST_H
 
-typedef struct SqList{
+/*
+typedef struct SeqList{
 
     ElemType data[maxSize];
     ElemType length;
-}SqListAlias,*SqListPtr;
+}SeqList,*SqListPtr;*/
+typedef struct SeqList{
 
-int findElem(struct SqList list , ElemType x);//查找第一个比x大的元素的位置
+    ElemType data[maxSize];
+    ElemType length;
+}SeqList;
 
-void insertElem();//
+/*init sequence list*/
+SeqList* initSeqlist();
+
+/*create sequece list*/
+SeqList* createSeqlist(SeqList *list);
+
+/*insert element after specified location n*/
+SeqList* insertElem(SeqList *list ,int n , ElemType value);
+
+/*delete element at specified location n*/
+SeqList* deleteElem(SeqList *list , int n);
+
+/*update element at specified location n with some value*/
+SeqList* modifyElem(SeqList *list , int n , ElemType value);
+
+/*get location of the specified value*/
+int findElem(SeqList *list , ElemType x);
+
+/*print elements in the sequence list*/
+void printSeqlist(SeqList *list);
 
 #endif //DS_DEV_SQLIST_H

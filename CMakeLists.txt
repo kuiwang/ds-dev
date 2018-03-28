@@ -3,4 +3,5 @@ project(ds_dev)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ds_dev main.cpp basic.h sqlist.h singlelist.h doublelist.h sqlist.c)
+#add_executable(ds_dev main.cpp basic.h sqlist.h singlelist.h doublelist.h sqlist.c main.c)
+add_executable(ds_dev main.c basic.h sqlist.h singlelist.h doublelist.h sqlist.c)

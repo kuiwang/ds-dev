@@ -9,6 +9,8 @@
 typedef struct LNode{
     ElemType data;
     struct LNode *next;
-}LNode,*LNodePtr;
+}LNode;
+
+
 
 #endif //DS_DEV_SINGLELIST_H

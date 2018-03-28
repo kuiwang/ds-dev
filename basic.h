@@ -1,16 +1,15 @@
 //
 // Created by root on 2018/3/27.
 //
-#include "iostream"
 #include "stdio.h"
 #include "conio.h"
 #include "stdlib.h"
 #include "time.h"
-#include "windows.h"
+#include "stdbool.h"
 
 typedef int ElemType;
-typedef bool Status;
-#define ERROR 1//define定义后不要加分号";"
+typedef bool STATUS;
+#define ERROR 1
 #define OK 0
 #define maxSize 100
 

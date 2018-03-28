@@ -1,16 +1,14 @@
 #include "basic.h"
 
 int main(int argc , char **argv) {
-    int i = 0 , sum = 0 ;
-    for (int i = 0; i < 101; ++i) {
-        sum += i;
-    }
-    int n = 0 , m = 0;
+    int i , sum = 0 , n;
     printf("input number n:");
     scanf("%i",&n);
-
+    for ( i = 0; i <= n; ++i) {
+        sum += i;
+    }
     printf("your input:%i\n",n);
-    printf("printf:1+...+100 = %i\n" , sum);
+    printf("sum of 1+...+%i = %i\n" ,n , sum);
 
     return 0;
 
