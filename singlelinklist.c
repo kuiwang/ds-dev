@@ -15,8 +15,9 @@ LNode* createLNode(){
 /*create linkedlist from head,the final element order is opposite with the input order*/
 LNode* createLinklistFromHead(LNode *list,int a[]){
     LNode* newnode;
+    int i;
     int len = sizeof(a)/sizeof(a[0]);
-    for (int i = 0; i < len; ++i) {
+    for (i = 0; i < len; ++i) {
         newnode = createLNode();
         newnode->data=a[i];
         newnode->next = list->next;
@@ -28,8 +29,9 @@ LNode* createLinklistFromHead(LNode *list,int a[]){
 LNode* createLinklistFromTail(LNode *list,int a[]){
     LNode *newnode ,*tmp;
     tmp = list;
+    int i;
     int len = sizeof(a)/sizeof(a[0]);
-    for (int i = 0; i < len; ++i) {
+    for (i = 0; i < len; ++i) {
         newnode = createLNode();
         newnode->data=a[i];
         tmp->next = newnode;
