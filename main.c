@@ -3,17 +3,29 @@
 //
 #include "basic.h"
 #include "sqlist.h"
+#include "singlelist.h"
 
 int main(int argc , char **argv){
     /*
-    SeqList *list = initSeqlist();
-    createSeqlist(list);
-    printSeqlist(list);
-    insertElem(list,3,119);
-    printSeqlist(list);
-    deleteElem(list,5);
-    printSeqlist(list);
+    SeqList *headList = initSeqlist();
+    createSeqlist(headList);
+    printSeqlist(headList);
+    addElemAfterLocation(headList,3,119);
+    printSeqlist(headList);
+    removeElem(headList,5);
+    printLinkList(headList);
     */
+
+    /*single linked headList */
+    LNode *headList = initLinklist();
+    createLinklistFromHeadManually(headList);
+    printLinkList(headList);
+
+
+    LNode *tailList = initLinklist();
+    createLinklistFromTailManually(tailList);
+    printLinkList(tailList);
+
 
     return 0;
 }

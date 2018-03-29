@@ -17,22 +17,34 @@ LNode* createLNode();
 /*init linkedlist */
 LNode* initLinklist();
 
-/*create  linkedlist*/
-LNode* createLinklist(LNode *list);
+/*create single linked list from head with specified array*/
+LNode* createLinklistFromHead(LNode *list,int a[]);
+
+/*create single linked list from tail with specified array*/
+LNode* createLinklistFromTail(LNode *list,int a[]);
+
+/*create single linked list from head with manual input*/
+LNode* createLinklistFromHeadManually(LNode *list);
+
+/*create single linked list from tail with manual input*/
+LNode* createLinklistFromTailManually(LNode *list);
 
 /*insert element after specified location n*/
-LNode* insertElem(LNode *list ,int n , ElemType value);
+LNode* addElemAfterLocation(LNode *list, int n, ElemType value);
+
+/*insert element after specified location n*/
+LNode* addElemBeforeLocation(LNode *list, int n, ElemType value);
 
 /*delete element at specified location n*/
-LNode* deleteElem(LNode *list , int n);
+LNode* removeElem(LNode *list, int n);
 
-/*update element at specified location n with some value*/
-LNode* modifyElem(LNode *list , int n , ElemType value);
+/*change element with value old to value*/
+LNode* updateElemValue(LNode *list, ElemType old, ElemType value);
 
 /*get location of the specified value*/
-int findElem(LNode *list , ElemType x);
+int getElemLoc(LNode *list, ElemType x);
 
 /*print elements in the sequence list*/
-void printSeqlist(LNode *list);
+void printLinkList(LNode *list);
 
 #endif //DS_DEV_SINGLELIST_H
