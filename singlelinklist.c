@@ -83,20 +83,55 @@ LNode* createLinklistFromTailManually(LNode *list){
     }
 }
 
+/*linked list length*/
+int listLength(LNode *list){
+    if(!list){
+        return 0;
+    }
+    LNode *tmp;
+    int len = 0;
+    tmp = list;
+    while(tmp->next){
+        len++;
+        tmp = tmp->next;
+    }
+    return len;
+}
+
 /*insert element after specified location n*/
 LNode* addElemAfterLocation(LNode *list, int n, ElemType value){
     if (!list){
         printf("error ! List is null");
         exit(1);
     }
-    /*
-    int i = 0;
-    LNode *tmp = list->next;
-    while(tmp){
-        i++;
-        if(n == i)
-            break;
-    }*/
+
+    int i = 0 ,len = 0;
+    len = listLength(list);
+    if(n <0 || n>len){
+        printf("location %i is invalid!\n",n);
+        exit(1);
+    }
+    if(n == 0){
+        LNode *newnode ;
+        newnode = (LNode*)malloc(sizeof(LNode));
+        newnode->data = value;
+        newnode->next = list->next;
+        list->next = newnode;
+    }else{
+        LNode *tmp = list->next;
+        while(tmp){
+            i++;
+            if(n == i)
+                break;
+            tmp = tmp->next;
+        }
+        LNode *newnode = (LNode*)malloc(sizeof(LNode));
+        newnode->next = tmp->next;
+        tmp->next = newnode;
+        newnode->data = value;
+    }
+
+
 }
 
 /*insert element after specified location n*/
@@ -115,7 +150,8 @@ int getElemLoc(LNode *list, ElemType x);
 
 /*print elements in the sequence list*/
 void printLinkList(LNode *list){
-    printf("print single linked list value in below:\n");
+    int len = listLength(list);
+    printf("single linked list size: %i ,value in below:\n",len);
     if(list){
         LNode *tmp = list->next;
         while(tmp){
